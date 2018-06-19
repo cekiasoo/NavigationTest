@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_simple_first_frag">
+    <fragment
+        android:id="@+id/nav_simple_first_frag"
+        android:name="com.ce.navigationtest.simple.FirstFragment"
+        android:label="first frag"
+        tools:layout="@layout/fragment_simple_first">
+        <!--<action
+            android:id="@+id/action_nav_first_frag_to_nav_second_frag"
+            app:destination="@id/nav_simple_second_frag"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>-->
+        <action
+            android:id="@+id/action_nav_first_frag_to_nav_second_frag"
+            app:destination="@id/nav_simple_second_frag" />
+        <argument android:name="data" app:type="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_simple_second_frag"
+        android:name="com.ce.navigationtest.simple.SecondFragment"
+        android:label="second frag"
+        tools:layout="@layout/fragment_simple_second">
+        <action
+            android:id="@+id/action_nav_second_frag_to_nav_third_frag"
+            app:destination="@id/nav_simple_third_frag" />
+        <argument android:name="booleanData" app:type="boolean" />
+        <!--<argument android:name="byteData" app:type="byte" />-->
+        <!--<argument android:name="charData" app:type="char" />-->
+        <!--<argument android:name="shortData" app:type="short" />-->
+        <argument android:name="intData" app:type="integer" />
+        <!--<argument android:name="longData" app:type="long" />-->
+        <argument android:name="floatData" app:type="float" />
+        <!--<argument android:name="doubleData" app:type="double" />-->
+        <argument android:name="stringData" app:type="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_simple_third_frag"
+        android:name="com.ce.navigationtest.simple.ThirdFragment"
+        android:label="third frag"
+        tools:layout="@layout/fragment_simple_third">
+        <action
+            android:id="@+id/action_nav_third_frag_to_nav_fourth_frag"
+            app:destination="@id/nav_simple_fourth_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_simple_fourth_frag"
+        android:name="com.ce.navigationtest.simple.FourthFragment"
+        android:label="fourth frag"
+        tools:layout="@layout/fragment_simple_fourth">
+    </fragment>
+</navigation>
